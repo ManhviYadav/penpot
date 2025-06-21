@@ -4,7 +4,7 @@ const AuthContext = createContext(null);
 
 // Test credentials
 const TEST_CREDENTIALS = {
-  email: 'test@example.com',
+  email: 'Penpot@test.com',
   password: 'password123'
 };
 
