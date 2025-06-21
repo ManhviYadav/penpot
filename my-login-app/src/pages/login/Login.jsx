@@ -50,7 +50,7 @@ const Login = () => {
       </div>
       <div className="right-section">
         <div className="login-box">
-          <h2>Sign in to your account</h2>
+          <h2>Login</h2>
           {error && <div className="error-message">{error}</div>}
           <form onSubmit={handleSubmit} className="login-form">
             <div className="input-group">
@@ -83,11 +83,6 @@ const Login = () => {
               {isLoading ? 'Signing in...' : 'Sign in'}
             </button>
           </form>
-          <div className="login-help">
-            <p>Test credentials:</p>
-            <code>Email: test@example.com</code><br />
-            <code>Password: password123</code>
-          </div>
         </div>
       </div>
     </div>
