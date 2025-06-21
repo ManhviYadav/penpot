@@ -1,0 +1,356 @@
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* Left Sidebar */
+.dashboard-sidebar {
+  /* wrapper around the fixed-width sidebar component */
+}
+
+/* Main Content Area */
+.dashboard-main {
+  padding: 40px 48px;
+}
+
+.dashboard-header {
+  margin-bottom: 48px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #111827;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+/* Cards Container */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Progress Card */
+.progress-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 200px;
+}
+
+.progress-info h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.progress-info h4 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #2563eb;
+}
+
+.progress-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-status p {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Empty Card */
+.empty-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  min-height: 200px;
+}
+
+/* Right Side Area */
+.dashboard-right {
+  width: 300px;
+  padding: 40px 24px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Status Section */
+.status-section {
+  padding: 16px 0;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+}
+
+.status-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Notifications Section */
+.notifications-section {
+  flex: 1;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-indicator {
+  width: 8px;
+  height: 8px;
+  background: #10B981;
+  border-radius: 50%;
+}
+
+/* Skeleton Section Styles */
+.skeleton-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Header Skeleton */
+.header-skeleton {
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.header-skeleton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.text-content {
+  opacity: 1;
+}
+
+/* Card Skeleton */
+.card-skeleton {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  min-height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-skeleton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.card-content {
+  opacity: 1;
+}
+
+.text-group h3, .text-group h4 {
+  margin: 0;
+}
+
+.circle-area {
+  margin-top: 24px;
+  text-align: center;
+}
+
+/* Status Skeleton */
+.status-skeleton {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.status-skeleton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.status-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 1;
+}
+
+/* Notifications Skeleton */
+.notifications-skeleton {
+  position: relative;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.notifications-skeleton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.notifications-content {
+  opacity: 1;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-indicator {
+  width: 8px;
+  height: 8px;
+  background: #10B981;
+  border-radius: 50%;
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Override header skeleton styling */
+.dashboard-header.skeleton-section {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+/* Text group skeleton inside progress card */
+.text-group.skeleton-section {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 24px; /* space below text for circle */
+}
+
+/* Style progress card (retain existing) and ensure border */
+.progress-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 200px;
+}
+
+/* Empty card placeholder */
+.empty-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  min-height: 200px;
+}
+
+/* Status section placeholder */
+.status-section.skeleton-section {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* Notifications section placeholder */
+.notifications-section.skeleton-section {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  position: relative;
+} 
