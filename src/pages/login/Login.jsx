@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import './Login.css';
 
@@ -83,6 +83,9 @@ const Login = () => {
               {isLoading ? 'Signing in...' : 'Sign in'}
             </button>
           </form>
+          <div className="login-footer">
+            <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
+          </div>
         </div>
       </div>
     </div>

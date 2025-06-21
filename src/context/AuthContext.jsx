@@ -24,6 +24,19 @@ export const AuthProvider = ({ children }) => {
     return { success: false, error: 'Invalid credentials' };
   };
 
+  const signup = async (userData) => {
+    // Simulate API call delay
+    await new Promise(resolve => setTimeout(resolve, 1000));
+
+    // For demo purposes, we'll accept any signup and create a user
+    const newUser = { 
+      email: userData.email, 
+      name: `${userData.firstName} ${userData.lastName}` 
+    };
+    setUser(newUser);
+    return { success: true, user: newUser };
+  };
+
   const logout = () => {
     setUser(null);
   };
@@ -31,6 +44,7 @@ export const AuthProvider = ({ children }) => {
   const value = {
     user,
     login,
+    signup,
     logout,
     isAuthenticated: !!user
   };
